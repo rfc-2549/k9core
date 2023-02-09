@@ -1,0 +1,7 @@
+* k9core
+
+Extremely minimalist coreutils. It also includes some util-linux
+packages
+
+** License
+Licensed under the k9pl. See LICENSE for more information.

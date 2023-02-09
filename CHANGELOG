@@ -1,0 +1,160 @@
+96d5493 Fixed stuff in rmdir
+74047ab proto -l in ls
+8a477a0 trying EBIN indentation style :-------DDDDDDDDDDDD
+fbff968 wait i'm fucking stupid, lmao, well musl, good luck searching for a file called -<CHAR>, but if it makes you happy, go for it my dude
+e4192c6 don't take - as stdin if it is a flag (solves musl getopt() bullshit)
+dc61ade sorry, my emacs indentation was retarded
+342a885 less long line
+dd949ba Tabs instead of spaces in indentation lol
+34a3f38 added contributing guideliness
+609309e im an idiot
+36f49ec cat: ignore -u and - can be used for stdin
+8627b3b shit to cat.c read the diff lmao
+997b2ed https://lainsafe.delegao.moe/files/160545969573108.png
+cc03664 Cleanup code
+c322cdd %c is better since gnu date gives that by default so take it
+b0ca123 Added a probably non posix compliant date(1) but it works :DDD
+8dc1039 Added the -p flag to ls
+a43985b Holy cow, I added comments but I made another commit to k9core!
+1d78c2c It seems that, somehow, i typed 1 instead of 0
+8f16928 POSIX, I don't really get you sometimes...
+f487111 Added tee!
+8eed6cc added -h flag to chgrp
+b244eb3 added chgrp
+ea00641 wc prints the filename
+21718a0 Modified the style
+571b6c7 Is this ok, POSIX?
+98f9bd9 Remove useless headers
+016c4f6 Whatever this does lmao
+20eb8d5 cleaned up chmod.c
+0a5169b generic case for uname
+8cde471 what the hell is -m flag posix is literally the same as -c
+9713636 Finally fixed wc :D
+4d96265 Improved uname.c
+d8c6dd6 Modified the readme because this also has util-linux packes
+7f38565 git you're a bit dumb
+a8ae0f1 moved non coreutils programs to a nonuserland folder since they are not userland programs
+b653b75 Better style and stuff to uname.c
+2b3baec In GNU's uname(1) if you pass no arguments it prints the kernel name so mine does that too.
+41fac48 Added uname, works but probably not as it should, initial commit for this and i'll fix it if needed later (probably i forgot some flags, programming is hard)
+7f4a6e2 added chroot
+dfa79c9 im stupid
+015f021 added cat the posix -u flag which is useless
+07c86b1 Improved makefile
+30bc675 added a bunch of programs
+d832f81 added groups
+f0712c3 lmao
+e5464f8 Added logname.c differences with whoami.c: 	    * whoami prints who you are 	    * logname prints the username you logged with meaning that if you run logname with doas(1) or sudo(8) you'll get the real username instead of root
+cd73c58 tty(1), which prints the name of the teletypewriter you're using.
+fdd3579 improved sleep by using usleep() instead of sleep() which allows more precise times
+0d806ef add sync
+cb32179 added ernno things
+2d60914 im a bit dumb you know
+32e3a82 lol
+069bde6 i kinda hate posix because -n, but there it is i just have to add a for loop so it iterates every file passed by args
+642d6f3 added head
+61a4887 modified kill.c so doesn't use getopt (which in this case was a complete overkill). Also a warning if nothing given.
+0d9b8f2 sleep
+0f8f9dc exec
+fecba9a Almost done wc only pick from stdin if no file given. but all flags are working!
+dcf829a somebody pls fix flags and stdin
+3a44055 Merge branch 'master' of gitlab.com:call-cc/k9core into master
+8d1bf0e added flags to wc
+1a37413 improve ls (make it look cleaner)
+371c5f0 What the fuck is this
+c0935a1 added errno to ln.c
+0ee58eb idk whats this git told me isnt' staged so hre's your commit
+a1f38d5 Edited some stuff in wc and mv
+bb78561 Fixed shred
+7bedf74 use stat() instead of a own function to count bytes.
+ab00cba Added shred
+801cf9d Added unlink, not really sure of that this do but well here it is
+3823f62 less bad mv
+9c856f4 yeah so now the thing closes the file descriptors
+2996e21 cp now supports binary data and touch.c uses the saner creat() instead of open() because using open() there was simply stupid
+1d8f3bf fprintf in mount.c
+59d1ef6 Better errno
+b574d18 added id.c.
+43d55a3 -f flag for umount.c (now we use umount2 though)
+636072c lol
+69d0fae Added stuff to mount.c
+8065fed Better whoami
+7d414e2 Mount and whoami
+7cb95b3 added umount
+755222a I just do a prototype of mkdir -p that does not work because it does not work so is commented don't uncomment it unless you can fix it thank you
+b339661 Merge branch 'master' of gitlab.com:call-cc/k9core
+5238638 Added -l to kill.c
+b263799 Fix to remove error in -Wall -Wextra
+87c139e Fix ln slightly by removing instead of unlinking.
+2401662 whoops
+f317faa Aded cp and mv
+61245b5 This will save a lot of time
+e1e3f9f more readable cat.c
+c037341 Cat prints binary data now
+c904af6 Someone make this read binary shit
+268a888 Rewritten cat so it's not literally 9base's
+9d6db6f Improved wc
+971e32a bare bones version of wc
+e4c35b7 unistd.h was useless in ls.c
+8ac5f0b Add -a flag for ls.
+8c81a09 Do not print dot files in ls.c
+a6bfb92 Added ls.c
+530bb5c Added chown.c
+f4dc088 Added variable guidelines
+1c6f622 Improve echo, or fix -n flag
+538adce printf -> fprintf in src/chmod.c
+60b3510 Added chmod
+d2be0fe Added false and true
+aff3c77 Readme in org
+a4d4d90 Fixed style in src/echo.c
+82b36c8 Clean code in src/echo.c
+73ab1c7 Sorry i haven't slept in 21 hours
+2f5f39a goddammit
+eba3830 I don't know I was really drunk at the time
+e4cdd7d slight fix
+2214494 Add -n flag to echo
+79ec3ad License update
+4ca78b4 Improve makefile and mark ln as complete
+85f3c31 I don't know how to use gdb
+8adf347 Switch statement
+9c7fec7 Added kill
+559fd48 Change STYLE.ORG file name because it trips up gitlab
+c1115b3 Add to README
+81244ae Add to TODO and migrate to the kill-9 public license
+e27abc9 Improve yes
+0670f46 Fix errors in style, plus more stuff about C standardization
+02699d5 Add error alert to ln and another item to the todo
+fbacc8d Style written in org
+bc423b1 Add todo.org, fix pwd.c
+8dcc572 Added new style thing
+f4e746e Change errors in rmdir to warns
+9486a50 Add -f flag to ln
+f458b93 More makefile improvements
+e4758c0 Remove note, improve makefile
+66dbeda I hate git.
+36adf54 Fixed makefile
+fe104b8 Merge branch 'master' of https://gitlab.com/call-cc/k9core
+c68d449 Add note to ln.c
+bdbe212 Add to TODO and clean up ln
+14e32f3 Improved makefile
+3843efd Tried to add symlinks the worst way possible. Please fix
+0575e4d Add ln
+87681f9 Added yes
+976d1ed idk why is this merge important tbh Merge branch 'master' of gitlab.com:call-cc/k9core
+62ecbde Added src/mkdir.c, src/rm.c, some tips for commiters and close file descriptor in src/touch.c
+30192ae Adhere to style guidelines
+cb17679 added coding style guide
+d4eb349 Make dirname more posix compliant
+d2c5b8a Add dirname
+83af9b4 Errors count to rmdir
+9077404 Rewritten rmdir
+5450b0c add multiple-argument deletion to rmdir
+35c7b05 Add rmdir
+7db446d Add makefile
+ff4f7c1 Added touch
+36b7302 Add README
+ba25b37 Add pwd
+152ad26 Very slight cat fix
+602dd40 Fix echo, shorten file size
+9301665 Add echo
+0e055db Initial commit
